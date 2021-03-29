@@ -1,6 +1,6 @@
 {
-  "name": "github-dashboard",
-  "homepage": "/github-dashboard",
+  "name": "dashboard",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
