@@ -1,0 +1,51 @@
+@import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/abstracts/extends";
+
+.metric {
+  $self: &;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 2rem;
+  &__wrapper {
+    $dimensions: 60px;
+    width: $dimensions;
+    height: $dimensions;
+    border-radius: 100%;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    $width: 30px;
+    $height: 25px;
+    width: $width;
+    max-height: $height;
+  }
+  &__figure {
+    padding: unset;
+  }
+  &__name {
+    @extend %subtitle;
+  }
+  &--repositories {
+    #{$self}__wrapper {
+      background: $primary-shade;
+    }
+  }
+  &--followers {
+    #{$self}__wrapper {
+      background: $secondary-shade;
+    }
+  }
+  &--following {
+    #{$self}__wrapper {
+      background: $tertiary-shade;
+    }
+  }
+  &--gists {
+    #{$self}__wrapper {
+      background: $quaternary-shade;
+    }
+  }
+}

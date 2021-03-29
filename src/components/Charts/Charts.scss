@@ -1,0 +1,22 @@
+@import "../../stylesheets/abstracts/breakpoints";
+@import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/abstracts/extends";
+@import "../../stylesheets/base/typography";
+
+.charts {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: 1fr;
+  @include desktop {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.chart {
+  @extend %card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
